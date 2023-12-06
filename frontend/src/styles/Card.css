@@ -1,0 +1,48 @@
+/* Dashboard.css */
+.dashboard-container{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Styles for the card */
+
+.Card-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+    color: antiquewhite;
+    width: 300px;
+    height: 200px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 6px 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Card body styles */
+  .card-body {
+    padding: 20px;
+  }
+  
+  /* Card title */
+  .card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Card text */
+  .card-text {
+    color: #555;
+    font-size: 1rem;
+  }
+  
