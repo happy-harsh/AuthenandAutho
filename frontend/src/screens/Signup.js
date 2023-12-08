@@ -26,7 +26,7 @@ const Signup = () => {
       await axios.post('http://localhost:5000/signup', input,{
         withCredentials:true
       }).then((res)=>{
-        console.log(res.data);
+        alert("user created successfully")
         navigate("/Login")
 
       }).catch((err)=>{
@@ -35,7 +35,6 @@ const Signup = () => {
 
   } catch (error) {
       console.error('Error creating user:', error.response.data);
-      // Handle errors (display error messages, etc.)
   }
 };
 

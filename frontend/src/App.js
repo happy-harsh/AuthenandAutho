@@ -6,7 +6,10 @@ import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-ro
 import Signup from './screens/Signup';
 import Home from './screens/Home';
 import Dashboard from './screens/Dashboard';
+import { useSelector } from 'react-redux';
 function App() {
+  const isLoggedIn = useSelector(state=>state.isLoggedIn)
+  // console.log(isLoggedIn)
   return (
     <Router>
       <Routes>

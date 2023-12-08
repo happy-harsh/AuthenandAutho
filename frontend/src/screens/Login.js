@@ -3,6 +3,8 @@ import "../styles/Login.css";
 import Navbar from "../components/Navbar";
 import { Link, useNavigate } from "react-router-dom";
 import axios from 'axios'; // Import Axios for HTTP requests
+import { useDispatch } from "react-redux";
+import { authActions } from "../store";
 
 const Login = () => {
   // State to manage form data
@@ -12,6 +14,8 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   // Handle input change
   const handleChange = (e) => {
@@ -26,6 +30,7 @@ const Login = () => {
       withCredentials:true
     }).then((res)=>{
         console.log('Login successful:',res.data);
+        dispatch(authActions.login())
         navigate("/")
 
       }).catch((err)=>{
